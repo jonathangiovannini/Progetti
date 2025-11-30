@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar.tsx";
 import type {TeamMember, Mission} from "../types";
 import Card from "../components/Card";
+import Separator from "../components/Separator.tsx";
+import SendIcon from '@mui/icons-material/Send';
 
 function About(){
 
@@ -70,9 +72,7 @@ function About(){
                     ))
                 }
             </section>
-            <div className="w-full max-w-5xl mx-auto my-16 px-8">
-                <hr className="border-t-2 border-dashed border-gray-300" />
-            </div>
+            <Separator/>
             <section className = "grid grid-cols-1 content-center w-10/12 md:w-3/4 rounded-large shadow-md bg-gray-50 ml-auto mr-auto mb-8 ">
                 <div className = "text-center mt-8">
                     <h2 className = "font-bold text-2xl">La Nostra Missione</h2>
@@ -91,6 +91,19 @@ function About(){
                             <p className="text-gray-700 md:text-base p-4">{mission.description}</p>
                         </div>
                     ))}
+                </div>
+            </section>
+            <Separator/>
+            <section className = "grid grid-cols-1 w-full h-48">
+                <div className = "text-center ">
+                    <h2>Contattaci</h2>
+                    <p>Hai domande, suggerimenti o vuoi collaborare? Facci sapere la tua</p>
+                </div>
+                <div className = "text-center flex justify-center">
+                    <a href="" className = "w-64 flex border-1 border-mine-shaft-950 rounded-buttons justify-center items-center gap-5 h-12">
+                       <SendIcon className = ""/>
+                        <p className = "">SCRIVICI UNA MAIL</p>
+                    </a>
                 </div>
             </section>
         </>
