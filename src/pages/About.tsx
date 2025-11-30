@@ -3,6 +3,7 @@ import type {TeamMember, Mission} from "../types";
 import Card from "../components/Card";
 import Separator from "../components/Separator.tsx";
 import SendIcon from '@mui/icons-material/Send';
+import Footer from "../components/Footer.tsx";
 
 function About(){
 
@@ -12,21 +13,25 @@ function About(){
             role: 'Front-End Developer',
             roleColor: '#007bff',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eos facilis aliquam molestiae tempora doloribus. Consectetur magni consequatur mollitia reprehenderit.',
-            image: '/images/goku.png'
+            image: '/images/goku.png',
+            email: 'jonathan.giovannini@studenti.unitn.it'
         },
         {
             name: 'Alessandro Balasso',
             role: 'Lead Developer',
             roleColor: '#ff6b35',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nulla atque illo ducimus. Eos labore animi voluptates repellendus reprehenderit perferendis!',
-            image: '/images/goku.png'
+            image: '/images/goku.png',
+            email: 'alessandro.balasso@studenti.unitn.it'
+
         },
         {
             name: 'Nicolas Ciocozan',
             role: 'Multi-Functional Developer',
             roleColor: '#2ecc71',
             description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis porro, eaque corporis ex veritatis quaerat nostrum magni et itaque id.',
-            image: "/images/goku.png"
+            image: "/images/goku.png",
+            email: 'nicolas.ciocozan@studenti.unitn.it'
         }
     ];
 
@@ -100,12 +105,13 @@ function About(){
                     <p className = "p-4 text-lg">Hai domande, suggerimenti o vuoi collaborare? Facci sapere la tua</p>
                 </div>
                 <div className = "text-center flex justify-center">
-                    <a href="" className = "w-64 flex border-1 bg-mine-shaft-950 rounded-buttons justify-center items-center gap-5 h-12 transition delay-100 duration-300 ease-in-out hover:translate-y-1">
+                    <a href="mailto:team@hikenest.com" className = "w-64 flex border-1 bg-mine-shaft-950 rounded-buttons justify-center items-center gap-5 h-12 transition delay-100 duration-300 ease-in-out hover:translate-y-1">
                        <SendIcon className ="text-white"/>
                         <p className = "font-bold text-white">SCRIVICI UNA MAIL</p>
                     </a>
                 </div>
             </section>
+            <Footer />
         </>
     );
 }

@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
-import Footer from "./components/Footer.tsx";
+import Groups from './pages/Groups'
 import About from "./pages/About.tsx";
 
 function App() {
@@ -13,8 +13,9 @@ function App() {
             <Route path="/about" element={<About />}/>
             <Route path="/login" element={<Login />}/>
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/groups" element={<Groups />} />
+
         </Routes>
-        <Footer />
     </>
   )
 }

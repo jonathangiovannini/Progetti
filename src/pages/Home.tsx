@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar.tsx";
+import Footer from "../components/Footer.tsx";
 
 function Home(){
     return(
@@ -15,6 +16,7 @@ function Home(){
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }

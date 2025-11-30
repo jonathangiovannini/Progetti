@@ -4,6 +4,7 @@ export interface TeamMember {
     description: string;
     image: string;
     roleColor: string;
+    email: string;
 }
 export interface Mission {
     icon: string;

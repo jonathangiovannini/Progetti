@@ -6,9 +6,10 @@ interface CardProps {
     description: string;
     image: string;
     roleColor: string;
+    email: string;
 }
 
-const Card: React.FC<CardProps> = ({ name, role, description, image, roleColor }) => {
+const Card: React.FC<CardProps> = ({ name, role, description, image, roleColor , email}) => {
     return (
         /*<div className="flex flex-col lg:w-3/12 p-6 dark:bg-gray-50 dark:text-gray-800 hover:shadow-lg">
             <img src={image} alt={name} className="flex-shrink-0 object-cover h-64 rounded-sm sm:h-96 bg-gray-500 aspect-square " />
@@ -58,7 +59,7 @@ const Card: React.FC<CardProps> = ({ name, role, description, image, roleColor }
                     <a className="text-gray-400 hover:text-gray-900 transition-colors" href = "#">
                         <i className="fa-brands fa-github text-xl"></i>
                     </a>
-                    <a className="text-gray-400 hover:text-red-500 transition-colors " href = "#">
+                    <a className="text-gray-400 hover:text-red-500 transition-colors " href = {`mailto:${email}`}>
                         <i className="fa-regular fa-envelope text-xl"></i>
                     </a>
                 </div>
