@@ -96,13 +96,13 @@ function About(){
             <Separator/>
             <section className = "grid grid-cols-1 w-full h-48">
                 <div className = "text-center ">
-                    <h2>Contattaci</h2>
-                    <p>Hai domande, suggerimenti o vuoi collaborare? Facci sapere la tua</p>
+                    <h2 className = "font-bold  text-3xl lg:text-5xl">Contattaci</h2>
+                    <p className = "p-4 text-lg">Hai domande, suggerimenti o vuoi collaborare? Facci sapere la tua</p>
                 </div>
                 <div className = "text-center flex justify-center">
-                    <a href="" className = "w-64 flex border-1 border-mine-shaft-950 rounded-buttons justify-center items-center gap-5 h-12">
-                       <SendIcon className = ""/>
-                        <p className = "">SCRIVICI UNA MAIL</p>
+                    <a href="" className = "w-64 flex border-1 bg-mine-shaft-950 rounded-buttons justify-center items-center gap-5 h-12 transition delay-100 duration-300 ease-in-out hover:translate-y-1">
+                       <SendIcon className ="text-white"/>
+                        <p className = "font-bold text-white">SCRIVICI UNA MAIL</p>
                     </a>
                 </div>
             </section>
