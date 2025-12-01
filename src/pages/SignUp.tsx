@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+const inputTxtStyle = "w-full px-4 py-3 bg-white border border-mine-shaft-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-mine-shaft-950 focus:border-transparent transition-all";
+
+
 function SignUp() {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -59,7 +62,7 @@ function SignUp() {
                                 value={firstName}
                                 onChange={(e) => setFirstName(e.target.value)}
                                 placeholder="Mario"
-                                className="w-full px-4 py-3 bg-white border border-mine-shaft-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-mine-shaft-950 focus:border-transparent transition-all"
+                                className={`${inputTxtStyle}`}
                             />
                         </div>
 
@@ -73,7 +76,7 @@ function SignUp() {
                                 value={lastName}
                                 onChange={(e) => setLastName(e.target.value)}
                                 placeholder="Rossi"
-                                className="w-full px-4 py-3 bg-white border border-mine-shaft-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-mine-shaft-950 focus:border-transparent transition-all"
+                                className={`${inputTxtStyle}`}
                             />
                         </div>
                     </div>
@@ -88,7 +91,7 @@ function SignUp() {
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                             placeholder="Il tuo username"
-                            className="w-full px-4 py-3 bg-white border border-mine-shaft-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-mine-shaft-950 focus:border-transparent transition-all"
+                            className={`${inputTxtStyle}`}
                         />
                     </div>
 
@@ -102,7 +105,7 @@ function SignUp() {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="@email.com"
-                            className="w-full px-4 py-3 bg-white border border-mine-shaft-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-mine-shaft-950 focus:border-transparent transition-all"
+                            className={`${inputTxtStyle}`}
                         />
                     </div>
 
@@ -118,7 +121,7 @@ function SignUp() {
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     placeholder="••••••••"
-                                    className="w-full px-4 py-3 bg-white border border-mine-shaft-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-mine-shaft-950 focus:border-transparent transition-all"
+                                    className={`${inputTxtStyle}`}
                                 />
                                 <button
                                     type="button"
@@ -175,7 +178,7 @@ function SignUp() {
                                     value={confirmPassword}
                                     onChange={(e) => setConfirmPassword(e.target.value)}
                                     placeholder="••••••••"
-                                    className="w-full px-4 py-3 bg-white border border-mine-shaft-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-mine-shaft-950 focus:border-transparent transition-all"
+                                    className={`${inputTxtStyle}`}
                                 />
                                 <button
                                     type="button"
@@ -222,11 +225,11 @@ function SignUp() {
                         </div>
                     </div>
 
-                    <div className="flex items-start gap-2 pt-2">
+                    <div className="flex items-center gap-2 pt-2">
                         <input
                             type="checkbox"
                             id="terms"
-                            className="w-4 h-4 mt-1 rounded border-mine-shaft-300 text-mine-shaft-950 focus:ring-mine-shaft-950 cursor-pointer"
+                            className="w-4 h-4 rounded border-mine-shaft-300 text-mine-shaft-950 focus:ring-mine-shaft-950 cursor-pointer"
                         />
                         <label
                             htmlFor="terms"

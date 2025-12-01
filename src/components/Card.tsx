@@ -11,7 +11,9 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ name, role, description, image, roleColor, email }) => {
     return (
-        <div className="group flex flex-col h-full bg-gray-50 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-gray-100">
+        <div 
+            className="group flex flex-col h-full bg-gray-50 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-gray-100"
+        >
 
             <div className="h-2 w-full" style={{ backgroundColor: roleColor }}></div>
 

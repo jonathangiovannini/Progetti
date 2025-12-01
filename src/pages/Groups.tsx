@@ -1,8 +1,13 @@
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
 import Section from "../components/Section.tsx";
+import FormGruppo from "../components/FormGruppo.tsx";
+import {useState} from 'react'
 
 function Groups() {
+
+    const [FormAperta, setForm] = useState(false);
+
     return (
         <>
             <Navbar />
@@ -17,9 +22,18 @@ function Groups() {
                 </p>
             </Section>
             <div className="w-full flex justify-center ">
-                <button className="text-mine-shaft-50 font-bold bg-mine-shaft-950 w-48 h-16 rounded-buttons cursor-pointer">
+                <button 
+                    className="text-mine-shaft-50 font-bold bg-mine-shaft-950 w-48 h-16 rounded-buttons cursor-pointer transition delay-100 duration-300 ease-in-out hover:translate-y-1"
+                    onClick={() => setForm(true)}
+                >
                     CREA UN GRUPPO
                 </button>
+            </div>
+            <FormGruppo 
+                isOpen={FormAperta} 
+                onClose={() => setForm(false)} 
+            />            <div className = "">
+
             </div>
             <Footer />
         </>

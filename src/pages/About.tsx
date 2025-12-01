@@ -61,36 +61,40 @@ const missions: Mission[] = [
     },
 ];
 
-const variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-};
 
 function About() {
+
+
     return (
         <>
             <Navbar />
             <Section>
-                <motion.h1 className="justify-self-center text-mine-shaft-950 text-6xl lg:text-8xl p-12 font-bold text-shadow-sm text-shadow-mine-shaft-50">
+                <h1 
+                    className="justify-self-center text-mine-shaft-950 text-6xl lg:text-8xl p-12 font-bold text-shadow-2xs text-shadow-mine-shaft-50"
+                >
                     Incontra il team di HikeNest
-                </motion.h1>
-                <motion.p className="justify-self-center p-12 text-mine-shaft-950 text-xl">
+                </h1>
+                <p className="justify-self-center p-12 text-mine-shaft-950 text-xl">
                     Tre studenti appassionati dell'Università di Trento che credono che
                     l'escursionismo dovrebbe essere più accessibile, più sicuro e più
                     connesso che mai.
-                </motion.p>
+                </p>
             </Section>
-            <motion.section
+            <section
                 className="grid grid-cols-1 lg:grid-cols-3 m-8 lg:m-20  gap-8  border-t-mine-shaft-300"
-                variants={variants}
-                initial="hidden"
             >
                 {teamMembers.map((member, index) => (
                     <Card key={index} {...member} />
                 ))}
-            </motion.section>
+            </section>
             <Separator />
-            <section className="grid grid-cols-1 content-center w-10/12 md:w-3/4 rounded-large shadow-md bg-gray-50 ml-auto mr-auto mb-8 ">
+            <motion.section 
+                className="grid grid-cols-1 content-center w-10/12 md:w-3/4 rounded-large shadow-md bg-gray-50 ml-auto mr-auto mb-8 "
+                initial={{ opacity: 0, y: 50 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 0.8, ease: "easeInOut" }} 
+                viewport={{ once: true }} 
+            >
                 <div className="text-center mt-8">
                     <h2 className="font-bold text-2xl">La Nostra Missione</h2>
                     <p className="p-4">
@@ -120,9 +124,15 @@ function About() {
                         </div>
                     ))}
                 </div>
-            </section>
+            </motion.section>
             <Separator />
-            <section className="grid grid-cols-1 w-full h-48">
+            <motion.section 
+                className="grid grid-cols-1 w-full h-48"
+                initial={{ opacity: 0 }} 
+                whileInView={{ opacity: 1 }} 
+                transition={{ duration: 0.8, ease: "easeInOut" }} 
+                viewport={{ once: true }} 
+            >
                 <div className="text-center ">
                     <h2 className="font-bold  text-3xl lg:text-5xl">Contattaci</h2>
                     <p className="p-4 text-lg">
@@ -138,7 +148,7 @@ function About() {
                         <p className="font-bold text-white">SCRIVICI UNA MAIL</p>
                     </a>
                 </div>
-            </section>
+            </motion.section>
             <Footer />
         </>
     );

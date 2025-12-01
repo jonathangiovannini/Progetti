@@ -1,13 +1,15 @@
 import { useState } from "react";
 
+const inputTxtStyle = "w-full px-4 py-3 bg-white border border-mine-shaft-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-mine-shaft-950 focus:border-transparent transition-all";
+
 function Login() {
     const [showPassword, setShowPassword] = useState(false);
-    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [rememberMe, setRememberMe] = useState(false);
 
     const handleSubmit = () => {
-        console.log("Login attempted with:", { email, password, rememberMe });
+        console.log("Login attempted with:", { username, password, rememberMe });
     };
 
     return (
@@ -32,14 +34,14 @@ function Login() {
                 <div className="bg-white rounded-lg shadow-sm border border-mine-shaft-200 p-6 space-y-4">
                     <div>
                         <label className="block text-sm font-medium text-mine-shaft-700 mb-2">
-                            Email
+                            Username
                         </label>
                         <input
                             type="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            placeholder="tuo@email.com"
-                            className="w-full px-4 py-3 bg-white border border-mine-shaft-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-mine-shaft-950 focus:border-transparent transition-all"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            placeholder="MarioRossi"
+                            className = {`${inputTxtStyle}`}
                         />
                     </div>
 
@@ -53,7 +55,7 @@ function Login() {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 placeholder="••••••••"
-                                className="w-full px-4 py-3 bg-white border border-mine-shaft-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-mine-shaft-950 focus:border-transparent transition-all"
+                                className = {`${inputTxtStyle}`}
                             />
                             <button
                                 type="button"
