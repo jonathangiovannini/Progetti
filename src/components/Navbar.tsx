@@ -1,6 +1,6 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
-import {useState} from 'react';
+import { useState } from 'react';
 import MapIcon from '@mui/icons-material/Map';
 import GroupIcon from '@mui/icons-material/Group';
 import HikingIcon from '@mui/icons-material/Hiking';
@@ -16,35 +16,35 @@ const Navbar = () => {
     const linkStyle = "p-4 w-auto relative lg:w-32 flex items-center justify-center transition-all duration-300";
 
     const [isMenuOpen, setMenuOpen] = useState(false);
-    const toggleMenu = () =>{
+    const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
     }
 
     return (
-        <nav className = "grid grid-cols-2 lg:grid-cols-3 content-center w-full bg-mine-shaft-50  h-24 relative">
-            <div className = "w-24 h-24 p-4 flex justify-center items-center justify-self-start ml-4">
+        <nav className="grid grid-cols-2 lg:grid-cols-3 content-center w-full bg-mine-shaft-50  h-24 relative">
+            <div className="w-24 h-24 p-4 flex justify-center items-center justify-self-start ml-4">
                 <Link to="/">
                     <img src="/images/Logo.png" alt="logo-hikenest" />
                 </Link>
             </div>
-            <div className = "hidden lg:flex items-center justify-self-center w-full justify-center">
-                <div className = "flex justify-between items-center w-full max-w-lg lg:max-w-2xl xl:max-w-4xl transition-all duration-300">
-                    <Link to="/" className = {`${linkStyle} navbar-item`}>Map</Link>
-                    <Link to="/groups" className = {`${linkStyle} navbar-item`}>Groups</Link>
-                    <Link to="/my-hikes" className = {`${linkStyle} navbar-item`}>My Hikes</Link>
-                    <Link to="/about" className = {`${linkStyle} navbar-item`}>About Us</Link>
+            <div className="hidden lg:flex items-center justify-self-center w-full justify-center">
+                <div className="flex justify-between items-center w-full max-w-lg lg:max-w-2xl xl:max-w-4xl transition-all duration-300">
+                    <Link to="/" className={`${linkStyle} navbar-item`}>Map</Link>
+                    <Link to="/groups" className={`${linkStyle} navbar-item`}>Groups</Link>
+                    <Link to="/my-hikes" className={`${linkStyle} navbar-item`}>My Hikes</Link>
+                    <Link to="/about" className={`${linkStyle} navbar-item`}>About Us</Link>
                 </div>
             </div>
-            <div className = "hidden lg:flex items-center gap-2 justify-self-end mr-4">
-                <Link to="/login" className = {`${btnStyleDesk} border-mine-shaft-950 border`}>LOGIN</Link>
-                <Link to="/signup" className = {`${btnStyleDesk} bg-mine-shaft-950 text-mine-shaft-50`}>SIGN UP</Link>
+            <div className="hidden lg:flex items-center gap-2 justify-self-end mr-4">
+                <Link to="/login" className={`${btnStyleDesk} border-mine-shaft-950 border`}>LOGIN</Link>
+                <Link to="/signup" className={`${btnStyleDesk} bg-mine-shaft-950 text-mine-shaft-50`}>SIGN UP</Link>
             </div>
-            <div className = {`lg:hidden justify-self-end w-24 h-24 flex items-center justify-center`}>
-                <IconButton size={"large"} edge = "start" aria-label={"menu"} color = "inherit" onClick = {toggleMenu}>
+            <div className={`lg:hidden justify-self-end w-24 h-24 flex items-center justify-center`}>
+                <IconButton size={"large"} edge="start" aria-label={"menu"} color="inherit" onClick={toggleMenu}>
                     <MenuIcon fontSize="large"></MenuIcon>
                 </IconButton>
             </div>
-            <div 
+            <div
                 className={`fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300  ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                 onClick={toggleMenu}
             />
@@ -54,7 +54,7 @@ const Navbar = () => {
                         <CloseIcon fontSize="large" />
                     </IconButton>
                 </div>
-                <div className = "w-3/4 flex flex-col text-mine-shaft-950">
+                <div className="w-3/4 flex flex-col text-mine-shaft-950">
                     <Link to="/" className={`${linkStyle} grid grid-cols-2 text-lg md:text-xl p-4`}>
                         <MapIcon fontSize={"medium"} color={"inherit"}></MapIcon><p className="justify-self-end">Map</p>
                     </Link>
