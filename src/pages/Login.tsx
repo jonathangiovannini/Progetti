@@ -1,14 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import useDocumentTitle from "../hooks/useDocumentTitle";
-import SimpleFooter from "../components/SimpleFooter";
-
-const inputTxtStyle = "w-full px-4 py-3 bg-white border border-mine-shaft-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-mine-shaft-950 focus:border-transparent transition-all";
-
-function Login() {
-
-=======
 import { useNavigate } from "react-router-dom";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 import SimpleFooter from "../components/SimpleFooter";
@@ -20,18 +11,11 @@ const inputTxtStyle = "w-full px-4 py-3 bg-white border border-mine-shaft-200 ro
 function Login() {
     const apiUrl = import.meta.env.VITE_API_URL;
     const navigate = useNavigate();
->>>>>>> 9cb8f19 (connessione backend)
     useDocumentTitle('Login - HikeNest');
 
 
     const [showPassword, setShowPassword] = useState(false);
     const [password, setPassword] = useState("");
-<<<<<<< HEAD
-    const [rememberMe, setRememberMe] = useState(false);
-
-    const handleSubmit = () => {
-        console.log("Login attempted with:", { password, rememberMe });
-=======
     const [email, setEmail] = useState("");
     const [rememberMe, setRememberMe] = useState(false);
 
@@ -69,7 +53,6 @@ function Login() {
             console.error("Errore login:");
             alert("err.message");
         }
->>>>>>> 9cb8f19 (connessione backend)
     };
 
     return (
@@ -91,13 +74,6 @@ function Login() {
                     <form className="bg-white rounded-lg shadow-sm border border-mine-shaft-200 p-6 space-y-4">
                         <div>
                             <label className="block text-sm font-medium text-mine-shaft-700 mb-2">
-<<<<<<< HEAD
-                                Username
-                            </label>
-                            <input
-                                type="text"
-                                placeholder="MarioRossi"
-=======
                                 Email
                             </label>
                             <input
@@ -105,7 +81,6 @@ function Login() {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 placeholder="@email.com"
->>>>>>> 9cb8f19 (connessione backend)
                                 className={`${inputTxtStyle}`}
                             />
                         </div>
@@ -184,14 +159,6 @@ function Login() {
                             </a>
                         </div>
 
-<<<<<<< HEAD
-                        <button
-                            onClick={handleSubmit}
-                            className="w-full py-3 px-4 bg-mine-shaft-950 text-white font-medium rounded-lg hover:bg-mine-shaft-800 transition-all duration-200 shadow-md hover:shadow-lg"
-                        >
-                            Accedi
-                        </button>
-=======
                         <input type = "button"
                             className="w-full py-3 px-4 bg-mine-shaft-950 text-white font-medium rounded-lg hover:bg-mine-shaft-800 transition-all duration-200 shadow-md hover:shadow-lg"
                             value="Login"
@@ -199,7 +166,6 @@ function Login() {
                         />
                             
                         
->>>>>>> 9cb8f19 (connessione backend)
                     </form>
 
                     <div className="relative">

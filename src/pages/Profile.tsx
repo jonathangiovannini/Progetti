@@ -1,10 +1,6 @@
 import Navbar from "../components/Navbar";
 import SimpleFooter from "../components/SimpleFooter";
 import StatGrid from "../components/StatGrid";
-<<<<<<< HEAD
-
-const Profile = () => {
-=======
 import { useNavigate } from "react-router-dom";
 
 
@@ -14,7 +10,6 @@ const Profile = () => {
     localStorage.clear();
     navigate("/");
     };
->>>>>>> 9cb8f19 (connessione backend)
 
     return(
         <>
@@ -37,16 +32,12 @@ const Profile = () => {
                     <StatGrid/>
                 </div>
             </div>
-<<<<<<< HEAD
-            
-=======
             <button
             onClick={handleLogout}
             className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
             >
             Logout
             </button>
->>>>>>> 9cb8f19 (connessione backend)
             <SimpleFooter/>
         </>
     );

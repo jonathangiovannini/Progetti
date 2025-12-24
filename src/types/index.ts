@@ -30,9 +30,4 @@ export interface User {
 
 export interface AuthContextType {
   user: User | null;
-<<<<<<< HEAD
-  login: (userData: User) => void;
-  logout: () => void;
-=======
->>>>>>> 9cb8f19 (connessione backend)
 }
