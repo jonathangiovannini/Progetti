@@ -1,6 +1,10 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
+=======
+import { useState } from 'react';
+>>>>>>> 9cb8f19 (connessione backend)
 import MapIcon from '@mui/icons-material/Map';
 import GroupIcon from '@mui/icons-material/Group';
 import HikingIcon from '@mui/icons-material/Hiking';
@@ -16,11 +20,16 @@ const Navbar = () => {
     const btnStyleMob = "font-bold text-md text-center w-32 h-12 rounded-(--radius-buttons) flex items-center justify-center";
     const linkStyle = "p-4 w-auto relative lg:w-32 flex items-center justify-center transition-all duration-300";
 
+<<<<<<< HEAD
     const {user, login, logout} = useAuth();
+=======
+    const user = useAuth();
+>>>>>>> 9cb8f19 (connessione backend)
     const [isMenuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
     }
+<<<<<<< HEAD
   
   
     useEffect(() => {
@@ -42,6 +51,9 @@ const Navbar = () => {
         logout();
         
     }, []);*/
+=======
+
+>>>>>>> 9cb8f19 (connessione backend)
 
     return (
         <nav className="grid grid-cols-2 lg:grid-cols-3 content-center w-full bg-mine-shaft-50  h-24 relative">
@@ -58,7 +70,11 @@ const Navbar = () => {
                     <Link to="/about" className={`${linkStyle} navbar-item`}>About Us</Link>
                 </div>
             </div>
+<<<<<<< HEAD
             {user ? (
+=======
+            {user != null? (
+>>>>>>> 9cb8f19 (connessione backend)
                 <div className = 'hidden lg:flex items-center justify-self-end mr-4'>
                     <Link to = "/profile" className = 'rounded-full h-20 w-20 border border-mine-shaft-950 overflow-hidden'>
                         <img src="images/goku.png" alt="" className = 'object-cover'/>
@@ -100,7 +116,11 @@ const Navbar = () => {
                         <InfoIcon fontSize={"medium"} color={"inherit"}></InfoIcon> <p className="justify-self-end">About Us</p>
                     </Link>
                 </div>
+<<<<<<< HEAD
                 {user ? (
+=======
+                {user != null ? (
+>>>>>>> 9cb8f19 (connessione backend)
                     <div className = 'flex items-center mt-auto mb-8'>
                         <Link to = "/profile" className = 'rounded-full h-32 w-32 border border-mine-shaft-950 overflow-hidden flex items-center justify-center'>
                             <img src="images/goku.png" alt="" className = 'object-cover'/>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { ReactNode } from 'react';
 import { createContext, useState, useContext, useEffect } from 'react';
 import type {User, AuthContextType} from '../types/index.ts'
@@ -42,5 +43,9 @@ export const useAuth = (): AuthContextType => {
     throw new Error('useAuth deve essere usato all\'interno di un AuthProvider');
   }
 
+=======
+export const useAuth = (): string | null => {
+  const context = localStorage.getItem("userId");
+>>>>>>> 9cb8f19 (connessione backend)
   return context;
 };
