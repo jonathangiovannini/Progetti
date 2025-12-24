@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence, wrap } from 'motion/react';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
 
@@ -73,6 +73,10 @@ const FormGruppo: React.FC<FormGruppoProps> = ({ isOpen, onClose }) => {
                                         id="form-gruppo-data"
                                         className = {`${inputTxtStyle}`}
                                     />
+                                </div>
+                                <div className = {`${wrapperInputTextStyle}`}>
+                                    <label htmlFor="descrizione">Descrizione</label>
+                                    <textarea name="descrizione" id="" className = {`${inputTxtStyle} resize-none `}></textarea>
                                 </div>
                                 <div className={`${wrapperInputTextStyle} gap-4`}>
                                     <label htmlFor="esperienza">Livello Esperienza</label>

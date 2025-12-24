@@ -100,10 +100,19 @@ const Navbar = () => {
                         <InfoIcon fontSize={"medium"} color={"inherit"}></InfoIcon> <p className="justify-self-end">About Us</p>
                     </Link>
                 </div>
-                <div className="flex flex-col gap-2 mt-auto mb-8">
-                    <Link to="/login" className={`${btnStyleMob} border-mine-shaft-950 border w-56 `}>LOGIN</Link>
-                    <Link to="/signup" className={`${btnStyleMob} bg-mine-shaft-950 text-mine-shaft-50 w-56 `}>SIGN UP</Link>
-                </div>
+                {user ? (
+                    <div className = 'hidden lg:flex items-center justify-self-end mr-4'>
+                        <Link to = "" className = 'rounded-full h-20 w-20 border border-mine-shaft-950 overflow-hidden'>
+                            <img src="images/goku.png" alt="" className = 'object-cover'/>
+                        </Link>
+                    </div>
+                ) : (
+                    <div className="flex flex-col gap-2 mt-auto mb-8">
+                        <Link to="/login" className={`${btnStyleMob} border-mine-shaft-950 border w-56 `}>LOGIN</Link>
+                        <Link to="/signup" className={`${btnStyleMob} bg-mine-shaft-950 text-mine-shaft-50 w-56 `}>SIGN UP</Link>
+                    </div>
+                )}
+                
             </div>
         </nav>
     )
