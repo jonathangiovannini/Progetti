@@ -23,7 +23,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="grid grid-cols-2 lg:grid-cols-3 content-center w-full bg-mine-shaft-50  h-24 relative">
+        <nav className="grid grid-cols-2 lg:grid-cols-3 content-center w-full bg-mine-shaft-50  h-24 relative ">
             <div className="w-24 h-24 p-4 flex justify-center items-center justify-self-start ml-4">
                 <Link to="/">
                     <img src="images/Logo.png" alt="logo-hikenest" />
@@ -31,7 +31,7 @@ const Navbar = () => {
             </div>
             <div className="hidden lg:flex items-center justify-self-center w-full justify-center">
                 <div className="flex justify-between items-center w-full max-w-lg lg:max-w-2xl xl:max-w-4xl transition-all gap-8 lg:gap-0 duration-300">
-                    <Link to="/" className={`${linkStyle} navbar-item`}>Map</Link>
+                    <Link to="/map" className={`${linkStyle} navbar-item`}>Map</Link>
                     <Link to="/groups" className={`${linkStyle} navbar-item`}>Groups</Link>
                     <Link to="/my-hikes" className={`${linkStyle} navbar-item`}>My Hikes</Link>
                     <Link to="/about" className={`${linkStyle} navbar-item`}>About Us</Link>
@@ -56,17 +56,17 @@ const Navbar = () => {
                 </IconButton>
             </div>
             <div
-                className={`fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300  ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                className={`fixed inset-0 bg-black/50 z-1100 lg:hidden transition-opacity duration-300  ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                 onClick={toggleMenu}
             />
-            <div className={`fixed top-0 right-0 w-80 h-dvh transform-gpu bg-mine-shaft-50 flex flex-col items-center py-4 lg:hidden z-50 transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div className={`fixed top-0 right-0 w-80 h-dvh transform-gpu bg-mine-shaft-50 flex flex-col items-center py-4 lg:hidden z-1200 transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <div className="w-full flex justify-end pr-4 mb-4">
                     <IconButton onClick={toggleMenu} aria-label="close menu">
                         <CloseIcon fontSize="large" />
                     </IconButton>
                 </div>
                 <div className="w-3/4 flex flex-col text-mine-shaft-950">
-                    <Link to="/" className={`${linkStyle} grid grid-cols-2 text-lg md:text-xl p-4`}>
+                    <Link to="/map" className={`${linkStyle} grid grid-cols-2 text-lg md:text-xl p-4`}>
                         <MapIcon fontSize={"medium"} color={"inherit"}></MapIcon><p className="justify-self-end">Map</p>
                     </Link>
                     <Link to="/groups" className={`${linkStyle} border-t grid grid-cols-2 text-lg md:text-xl p-4`}>

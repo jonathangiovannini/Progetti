@@ -6,6 +6,7 @@ import Groups from './pages/Groups'
 import About from "./pages/About.tsx";
 import MyHikes from './pages/MyHikes.tsx'
 import Profile from './pages/Profile.tsx'
+import Map from './pages/Map.tsx'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/groups" element={<Groups />} />
             <Route path="/my-hikes" element={<MyHikes/>}/>
             <Route path="/profile" element = {<Profile/>}/>
+            <Route path="/map" element = {<Map/>}/>
         </Routes>
     </>
   )
