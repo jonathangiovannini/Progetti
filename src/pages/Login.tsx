@@ -37,7 +37,6 @@ function Login() {
             const errData = await response.json();
             throw new Error(errData.message || "Errore di login");
         }
-
         const data = await response.json();
         
         localStorage.setItem("token", data.token);
